@@ -1,0 +1,4 @@
+[jobs]
+- name: ExampleJob
+  cmd: echo "Jobber is running!"
+  time: '*'
