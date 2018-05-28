@@ -1,8 +1,8 @@
 FROM golang:1.9-alpine
 MAINTAINER C. Dylan Shearer <dylan@nekonya.info>
 
-ENV JOBBER_VER v1.3.2
-ENV SRC_HASH c265ee1a7076c523b44e900869b8af01817d92a5b543501e77db9277c8cf1f25
+ENV JOBBER_VER v1.3.3-pr.1
+ENV SRC_HASH 6adf01ea5f1edd3fb49ff9887c8c196298f78496f25e5d89277998d9b9a4d608
 
 RUN apk update && \
     apk upgrade && \
