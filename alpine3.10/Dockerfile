@@ -20,5 +20,6 @@ RUN wget -O /tmp/jobber.apk "https://github.com/dshearer/jobber/releases/downloa
 COPY --chown=jobberuser:jobberuser jobfile /home/jobberuser/.jobber
 RUN chmod 0600 /home/jobberuser/.jobber
 
+ENV JOBBER_ARGS "-u /var/jobber/${USERID}/cmd.sock /home/jobberuser/.jobber"
 USER jobberuser
-CMD /usr/libexec/jobberrunner -u /var/jobber/${USERID}/cmd.sock /home/jobberuser/.jobber
+CMD /usr/libexec/jobberrunner ${JOBBER_ARGS}
