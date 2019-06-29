@@ -1,5 +1,4 @@
 FROM alpine:3.10
-MAINTAINER C. Dylan Shearer <dylan@nekonya.info>
 
 # make user
 ENV USERID 100
