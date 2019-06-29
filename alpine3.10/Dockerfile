@@ -1,4 +1,4 @@
-FROM alpine:3.7
+FROM alpine:3.10
 MAINTAINER C. Dylan Shearer <dylan@nekonya.info>
 
 # make user
@@ -19,5 +19,4 @@ RUN apk add --no-scripts --allow-untrusted /jobber/jobber.apk && \
     rm /jobber/jobber.apk
 
 USER jobberuser
-ENTRYPOINT ["/usr/libexec/jobberrunner"]
-CMD ["/home/jobberuser/.jobber"]
+CMD /usr/libexec/jobberrunner -u /var/jobber/${USERID}/cmd.sock /home/jobberuser/.jobber
