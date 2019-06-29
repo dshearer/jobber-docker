@@ -1,7 +1,7 @@
 FROM alpine:3.10
 
 # make user
-ENV USERID 100
+ENV USERID 1000
 RUN addgroup jobberuser && \
     adduser -S -u "${USERID}" -G jobberuser jobberuser && \
     mkdir -p "/var/jobber/${USERID}" && \
