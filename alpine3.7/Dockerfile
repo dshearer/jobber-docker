@@ -6,7 +6,7 @@ ENV SRC_HASH 8d8cdeb941710e168f8f63abbfc06aab2aadfdfc22b3f6de7108f56403860476
 
 RUN apk update && \
     apk upgrade && \
-    apk add --update make rsync grep ca-certificates openssl wget
+    apk add --update make rsync grep ca-certificates openssl wget curl bash
 
 WORKDIR /go_wkspc/src/github.com/dshearer
 RUN wget "https://api.github.com/repos/dshearer/jobber/tarball/${JOBBER_VER}" -O jobber.tar.gz && \
