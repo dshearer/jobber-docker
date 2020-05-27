@@ -8,8 +8,8 @@ RUN addgroup jobberuser && \
     chown -R jobberuser:jobberuser "/var/jobber/${USERID}"
 
 # install jobber
-ENV JOBBER_VERSION 1.4.0
-ENV JOBBER_SHA256 37a96591e2c28494ef009d900a4c680c4fbd3c82bf4e6de3f70c6ad451e45867
+ENV JOBBER_VERSION 1.4.3
+ENV JOBBER_SHA256 c317006fdc96f84fe0a97c334d585bee51ec879f49ac33fc04d862e62f08256f
 RUN wget -O /tmp/jobber.apk "https://github.com/dshearer/jobber/releases/download/v${JOBBER_VERSION}/jobber-${JOBBER_VERSION}-r0.apk" && \
     echo "${JOBBER_SHA256} */tmp/jobber.apk" | sha256sum -c && \
 # --no-scripts is needed b/c the post-install scripts don't work in Docker
